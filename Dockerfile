@@ -12,18 +12,3 @@ COPY ssh/id_rsa.pub /root/.ssh/authorized_keys
 RUN chmod 400 /root/.ssh/authorized_keys
 
 ENTRYPOINT [ "sh", "-c", "service ssh start && sleep infinity" ]
-
-
-###
-# Owner Group All
-#  4     0     0   
-# 755
-# 644
-
-
-
-
-# 4 - read
-# 2 - write
-# 1 - execute
-# 0 - no permission
